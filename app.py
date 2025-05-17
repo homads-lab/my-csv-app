@@ -6,7 +6,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.rcParams['font.family'] = 'Hiragino Sans'
+matplotlib.rcParams['font.family'] = 'Noto Sans CJK JP'
 from sqlalchemy import create_engine
 
 # .envファイルの読み込み
