@@ -12,8 +12,15 @@ from sqlalchemy import create_engine
 # .envファイルの読み込み
 load_dotenv()
 
-# 環境変数から接続URLを取得
-db_url = os.environ.get("DB_URL")
+# 環境変数から接続情報を取得
+user = os.getenv("POSTGRES_USER")
+password = os.getenv("POSTGRES_PASSWORD")
+host = os.getenv("POSTGRES_HOST")
+port = os.getenv("POSTGRES_PORT")
+db = os.getenv("POSTGRES_DB")
+
+# SQLAlchemy 用の接続URLを組み立て
+db_url = f"postgresql://{user}:{password}@{host}:{port}/{db}"
 
 @st.cache_data
 def load_data_from_postgres():
