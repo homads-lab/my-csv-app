@@ -1,5 +1,5 @@
 # app.py
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import streamlit as st
 import pandas as pd
@@ -10,7 +10,7 @@ matplotlib.rcParams['font.family'] = 'Noto Sans CJK JP'
 from sqlalchemy import create_engine
 
 # .envファイルの読み込み
-load_dotenv()
+# load_dotenv()
 
 # 環境変数から接続情報を取得
 user = os.getenv("POSTGRES_USER")
