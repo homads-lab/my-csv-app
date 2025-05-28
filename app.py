@@ -19,8 +19,10 @@ host = os.getenv("POSTGRES_HOST")
 port = os.getenv("POSTGRES_PORT")
 db = os.getenv("POSTGRES_DB")
 
+
 # SQLAlchemy 用の接続URLを組み立て
 db_url = f"postgresql://{user}:{password}@{host}:{port}/{db}"
+
 
 @st.cache_data
 def load_data_from_postgres():
